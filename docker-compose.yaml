@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      args:
+        LINUX_USER_ID: ${LINUX_USER_ID:-1000}
+      context: .
+    volumes:
+      - .:/app
